@@ -255,7 +255,7 @@ func LogRequest(r *http.Request, t string) {
 		logger.Printf("[!] ERROR: %s\n", err)
 	}
 	err = json.Compact(as_c, as)
-	fmt.Printf("%s\n", as)
+	fmt.Printf("%s\n", as_c)
 	// Log the entry
 	f, err := os.OpenFile(*logFlag, os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0660)
 	if err != nil {
